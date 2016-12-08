@@ -1,13 +1,4 @@
-package ca.nexapp.starterkit.rest.resources;
-
-import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+package ca.nexapp.starterkit.rest.api.v1.resources;
 
 import ca.nexapp.starterkit.application.users.FindUserByEmailUseCase;
 import ca.nexapp.starterkit.application.users.UserAssembler;
@@ -15,6 +6,11 @@ import ca.nexapp.starterkit.application.users.UserResponse;
 import ca.nexapp.starterkit.domain.users.User;
 import ca.nexapp.starterkit.domain.users.UserNotFoundException;
 import ca.nexapp.starterkit.domain.users.UserRepository;
+
+import javax.inject.Inject;
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 @Path("user")
 public class UserResource {
